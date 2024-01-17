@@ -45,7 +45,7 @@
     
     FAE_md_fort_defense_strong:   "Starke Befaestigungen"
     FAE_md_fort_defense_weak:     "Geschwaechte Befaestigungen"
-    FAE_md_fort_occupation_speed: "Hampered by Enemy Fortifications"
+    FAE_md_fort_occupation_speed: "Durch feindliche Befestigungen erschwert"
     
     FAE_md_fort_kill_rate_strong:      "$FAE_md_fort_defense_strong$"
     FAE_md_fort_kill_rate_weak:        "$FAE_md_fort_defense_weak$"
@@ -89,17 +89,17 @@
     FAE_mo_combat_engineers_desc: "Specially-trained engineers on the battlefield will help us adapt the terrain to our needs and overcome enemy defenses."
     
     # Concepts
-    concept_FAE_siege:        "Siege Ability"
-    concept_FAE_entrenchment: "Fort Entrenchment"
-    FAE_txt_added_by_FAE:     "#italic This is a feature of the #blue Forts & Engineers#! mod.#!"
+    concept_FAE_siege:        "Belagerungsfaehigkeit"
+    concept_FAE_entrenchment: "Verschanzung des Forts"
+    FAE_txt_added_by_FAE:     "#italic Teil des #blue Forts & Engineers#! mod.#!"
     
     FAE_txt_siege:    "[concept_FAE_siege]"
     FAE_txt_entrench: "[concept_FAE_entrenchment]"
     FAE_txt_forts:    "[GetBuildingType('FAE_building_forts').GetName]"
     
-    FAE_txt_battles: "At the start of every [concept_battle] taking place in a [concept_state] with a $FAE_txt_forts$ [concept_building], the total $FAE_txt_siege$ and $FAE_txt_entrench$ is calculated from the number of [Concept('concept_unit', '$concept_units$')] in the battle on the attacking and defending sides, respectively."
+    FAE_txt_battles: "Zu beginn eines jeden [concept_battle], welcher in einem [concept_state] mit dazugehoerigen $FAE_txt_forts$ [concept_building] stattfindet. Werden $FAE_txt_siege$ und $FAE_txt_entrench$ durch die Anzahl der [Concept('concept_unit', '$concept_units$')] berechnet, dabei werden die jeweiligen Zahlen der Angreifer sowie Verteidiger beruecksichtigt."
     
-    FAE_txt_siege_stats:   "The per-[Concept('concept_unit', 'unit')] $FAE_txt_siege$ is calculated from:\n$FAE_txt_siege_stats_1$\n$FAE_txt_siege_stats_2$\n$FAE_txt_siege_stats_3$\n$FAE_txt_siege_stats_4$\n$FAE_txt_siege_stats_5$\n$FAE_txt_siege_stats_6$\n$FAE_txt_siege_stats_7$"
+    FAE_txt_siege_stats:   "Die per-[Concept('concept_unit', 'unit')] $FAE_txt_siege$ wird Anhand folgender Dinge berechnet:\n$FAE_txt_siege_stats_1$\n$FAE_txt_siege_stats_2$\n$FAE_txt_siege_stats_3$\n$FAE_txt_siege_stats_4$\n$FAE_txt_siege_stats_5$\n$FAE_txt_siege_stats_6$\n$FAE_txt_siege_stats_7$"
     FAE_txt_siege_stats_1: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_combat_engies')]#! if its [concept_military_formation] has the [GetMobilizationOption('FAE_mo_combat_engineers').GetName] [concept_mobilization_option] active"
     FAE_txt_siege_stats_2: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_heavy_tank')]#! if it is a [GetCombatUnitType('combat_unit_type_heavy_tank').GetName] [Concept('concept_combat_unit_type', 'Unit')]"
     FAE_txt_siege_stats_3: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_light_tank')]#! if it is a [GetCombatUnitType('combat_unit_type_light_tanks').GetName] [Concept('concept_combat_unit_type', 'Unit')]"
@@ -110,6 +110,6 @@
     
     FAE_txt_min_fort_bonus: "#p [Multiply_CFixedPoint( GetPlayer.MakeScope.ScriptValue('FAE_WEAK_FORT_MIN_BONUS'), '(CFixedPoint)100' )]%#!"
     
-    concept_FAE_siege_desc: "$FAE_txt_siege$ directly counters [concept_FAE_entrenchment].\n\n$FAE_txt_battles$\n\n$FAE_txt_siege$ acts as a direct reduction of $FAE_txt_entrench$ on a 1-to-1 basis, and the more $FAE_txt_entrench$ is reduced, the smaller the defender bonuses to [concept_defense] & [concept_kill_rate] and the attacker malus to [Concept('concept_occupation', '$concept_battle$ $concept_occupation$')] will be.\n\n$FAE_txt_siege_stats$\n\n$FAE_txt_added_by_FAE$"
+    concept_FAE_siege_desc: "$FAE_txt_siege$ Kontert [concept_FAE_entrenchment].\n\n$FAE_txt_battles$\n\n$FAE_txt_siege$ mindert den Effekt von $FAE_txt_entrench$ in einem Verhaeltnis von 1 zu 1. Je geringer $FAE_txt_entrench$ ist, desto schmaller ist der Verteidiger Bonus auf [concept_defense] & [concept_kill_rate]. Ebenso wird der Angreifer malus auf [Concept('concept_occupation', '$concept_battle$ $concept_occupation$')] reduziert.\n\n$FAE_txt_siege_stats$\n\n$FAE_txt_added_by_FAE$"
     
-    concept_FAE_entrenchment_desc: "$FAE_txt_entrench$ measures the effectiveness of $FAE_txt_forts$ being utilized by defending [Concept('concept_unit', 'Units')].\n\n$FAE_txt_battles$\n\nTotal $FAE_txt_entrench$ for a [concept_battle] is determined by taking the total $FAE_txt_entrench$ output from the $FAE_txt_forts$ [concept_building] involved in the [concept_battle] and multiplying it by the total number of defending [Concept('concept_unit', 'Units')] participating in the [concept_battle]. After calculating both values, the attacker's $FAE_txt_siege$ is subtracted from the defender's $FAE_txt_entrench$. This value is divded by the original $FAE_txt_entrench$ value to determine a fraction representing the #v effectiveness#! of $FAE_txt_forts$ in this [concept_battle]. Therefore, as $FAE_txt_siege$ increases, $FAE_txt_forts$ become less effective.\n\nReduced effectiveness of $FAE_txt_forts$ will reduce the defender bonuses to [concept_defense] & [concept_kill_rate] and the attacker malus to [Concept('concept_occupation', '$concept_battle$ $concept_occupation$')] by a certain percentage based on the fraction calculated above. Regardless of how low this fraction is, $FAE_txt_forts$ are guaranteed to be at least $FAE_txt_min_fort_bonus$ effective.\n\n$FAE_txt_added_by_FAE$"
+    concept_FAE_entrenchment_desc: "$FAE_txt_entrench$ misst die effektivitaet des $FAE_txt_forts$ bei der Verteidigung durch [Concept('concept_unit', 'Units')].\n\n$FAE_txt_battles$\n\n Die Gesamt $FAE_txt_entrench$ fuer einen [concept_battle] wird durch den $FAE_txt_entrench$ output, jener $FAE_txt_forts$ [concept_building] bestimmt die am [concept_battle] beteiligt sind. Anschlieszend wird die durch die Gesamtzahl der aktiv verteidigenden [Concept('concept_unit', 'Units')] multipliziert. Danach werden des Angreifers $FAE_txt_siege$ von den $FAE_txt_entrench$ des Verteidigers abgezogen. TBD. This value is divded by the original $FAE_txt_entrench$ value to determine a fraction representing the #v effectiveness#! of $FAE_txt_forts$ in this [concept_battle]. Therefore, as $FAE_txt_siege$ increases, $FAE_txt_forts$ become less effective.\n\nReduced effectiveness of $FAE_txt_forts$ will reduce the defender bonuses to [concept_defense] & [concept_kill_rate] and the attacker malus to [Concept('concept_occupation', '$concept_battle$ $concept_occupation$')] by a certain percentage based on the fraction calculated above. Regardless of how low this fraction is, $FAE_txt_forts$ are guaranteed to be at least $FAE_txt_min_fort_bonus$ effective.\n\n$FAE_txt_added_by_FAE$"
