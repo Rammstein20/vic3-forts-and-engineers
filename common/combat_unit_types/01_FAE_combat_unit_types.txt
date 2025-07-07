@@ -4,24 +4,19 @@
 
 combat_unit_type_cannon_artillery = {
     group = combat_unit_group_artillery
-	
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }	
+	max_manpower = 1000
 
     upkeep_modifier = {
         goods_input_artillery_add = 1
     }
-    
+
     battle_modifier = {
         unit_offense_add = 25
         unit_defense_add = 15
         unit_morale_loss_add = 10
         unit_kill_rate_add = 0.1
         unit_devastation_mult = 0.1
-        
+
         unit_fae_siege_add = 2
     }
 
@@ -33,28 +28,28 @@ combat_unit_type_cannon_artillery = {
 	unlocking_technologies = { artillery }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = east_asian
         }
         texture = "gfx/unit_illustrations/artillery_east_asian_cannon.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = south_asian
         }
         texture = "gfx/unit_illustrations/artillery_south_asian_cannon.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = african
         }
         texture = "gfx/unit_illustrations/artillery_african_cannon.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/artillery_arabic_cannon.dds"
@@ -74,24 +69,19 @@ combat_unit_type_cannon_artillery = {
 
 combat_unit_type_mobile_artillery = {
     group = combat_unit_group_artillery
-	
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }	
+	max_manpower = 1000
 
     upkeep_modifier = {
         goods_input_artillery_add = 2
     }
-    
+
     battle_modifier = {
         unit_offense_add = 30
         unit_defense_add = 15
         unit_morale_loss_add = 8
         unit_kill_rate_add = 0.2
         unit_devastation_mult = 0.15
-        
+
         unit_fae_siege_add = 3
     }
 
@@ -101,30 +91,30 @@ combat_unit_type_mobile_artillery = {
     }
 
 	unlocking_technologies = { napoleonic_warfare }
-	
+
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = east_asian
         }
         texture = "gfx/unit_illustrations/artillery_east_asian_mobile.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = south_asian
         }
         texture = "gfx/unit_illustrations/artillery_south_asian_mobile.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = african
         }
         texture = "gfx/unit_illustrations/artillery_african_mobile.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/artillery_arabic_mobile.dds"
@@ -143,13 +133,8 @@ combat_unit_type_mobile_artillery = {
 
 combat_unit_type_shrapnel_artillery = {
     group = combat_unit_group_artillery
+	max_manpower = 1000
 
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-    
     upkeep_modifier = {
         goods_input_artillery_add = 3
         goods_input_ammunition_add = 3
@@ -161,7 +146,7 @@ combat_unit_type_shrapnel_artillery = {
         unit_morale_loss_add = 6
         unit_kill_rate_add = 0.3
         unit_devastation_mult = 0.15
-        
+
         unit_fae_siege_add = 4
     }
 
@@ -173,28 +158,28 @@ combat_unit_type_shrapnel_artillery = {
 	unlocking_technologies = { breech_loading_artillery }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = east_asian
         }
         texture = "gfx/unit_illustrations/artillery_east_asian_shrapnel.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = south_asian
         }
         texture = "gfx/unit_illustrations/artillery_south_asian_shrapnel.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = african
         }
         texture = "gfx/unit_illustrations/artillery_african_shrapnel.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/artillery_arabic_shrapnel.dds"
@@ -212,13 +197,8 @@ combat_unit_type_shrapnel_artillery = {
 
 combat_unit_type_siege_artillery = {
     group = combat_unit_group_artillery
+	max_manpower = 1000
 
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-    
     upkeep_modifier = {
         goods_input_artillery_add = 4
         goods_input_ammunition_add = 4
@@ -231,7 +211,7 @@ combat_unit_type_siege_artillery = {
         unit_morale_loss_add = 6
         unit_kill_rate_add = 0.25
         unit_devastation_mult = 0.2
-        
+
         unit_fae_siege_add = 6
     }
 
@@ -243,28 +223,28 @@ combat_unit_type_siege_artillery = {
 	unlocking_technologies = { defense_in_depth }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = east_asian
         }
         texture = "gfx/unit_illustrations/artillery_east_asian_siege.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = south_asian
         }
         texture = "gfx/unit_illustrations/artillery_south_asian_siege.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = african
         }
         texture = "gfx/unit_illustrations/artillery_african_siege.dds"
     }
 
     combat_unit_image = {
-        trigger = { 
+        trigger = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/artillery_arabic_siege.dds"
@@ -278,13 +258,8 @@ combat_unit_type_siege_artillery = {
 
 combat_unit_type_heavy_tank = {
     group = combat_unit_group_artillery
+	max_manpower = 1000
 
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-    
     upkeep_modifier = {
         goods_input_tanks_add = 3
         goods_input_artillery_add = 4
@@ -300,7 +275,7 @@ combat_unit_type_heavy_tank = {
         unit_kill_rate_add = 0.25
         unit_morale_damage_mult = 0.15
         unit_devastation_mult = 0.2
-        
+
         unit_fae_siege_add = 10
     }
 
@@ -318,13 +293,8 @@ combat_unit_type_heavy_tank = {
 
 combat_unit_type_light_tanks = {
     group = combat_unit_group_cavalry
+	max_manpower = 1000
 
-    can_build_conscript = {
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-    }
-    
     upkeep_modifier = {
         goods_input_tanks_add = 2
         goods_input_artillery_add = 2
@@ -339,7 +309,7 @@ combat_unit_type_light_tanks = {
         unit_morale_loss_add = 4
         unit_devastation_mult = 0.1
         unit_occupation_mult = 0.3
-        
+
         unit_fae_siege_add = 8
     }
 
