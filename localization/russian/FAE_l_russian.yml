@@ -124,7 +124,7 @@
     setting_FAE_grs_ai_siege_vhi:      "[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_vhi')|=0%]"
     setting_FAE_grs_ai_siege_vhi_desc: "AI countries will gain [GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_vhi')|v=0%] extra [concept_FAE_siege] in every battle. $FAE_txt_ai_strong_warning$"
     setting_FAE_grs_ai_siege_ext:      "[GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_ext')|=0%]"
-    setting_FAE_grs_ai_siege_ext_desc: "AI countries will gain [GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_ext')|v=0%] extra [concept_FAE_siege] in every battle. $FAE_txt_ai_strong_warning
+    setting_FAE_grs_ai_siege_ext_desc: "AI countries will gain [GetPlayer.MakeScope.ScriptValue('FAE_ai_mult_ext')|v=0%] extra [concept_FAE_siege] in every battle. $FAE_txt_ai_strong_warning$"
     
     # Concepts
     concept_FAE_siege:        "Siege Ability"

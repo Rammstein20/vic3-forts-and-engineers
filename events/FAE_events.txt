@@ -31,9 +31,6 @@ FAE_ev.1 = {
                             if = {
                                 limit = {
                                     has_variable = FAE_num_battles
-                                    NOT = {
-                                        scope:state = THIS
-                                    }
                                 }
                                 change_variable = {
                                     name     = FAE_num_battles
